@@ -10,7 +10,7 @@ public class Notebook {
     }
 
     public void checkPrice() {
-        if (price < 600) {
+        if (price < 900) {
             System.out.println("This notebook is very cheap.");
         } else if ((price >= 600) && (price <= 1000)) {
             System.out.println("This notebook is good.");

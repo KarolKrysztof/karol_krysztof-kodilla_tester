@@ -2,29 +2,45 @@ import java.util.Random;
 
 public class RandomNumbers {
 
-    public static void main(String[] args) {
+    private static final Random random = new Random();
+    private static final int MAX_VALUE = 31;
 
-        Random random = new Random();
+    private int min = Integer.MAX_VALUE;
+    private int max = Integer.MIN_VALUE;
 
-        int randomNumber = random.nextInt(31);
+    public int getMin() {
+        return min;
+    }
 
-        int min = 0;
-        int max = 30;
+    public int getMax() {
+        return max;
+    }
+
+    public void run() {
         int sum = 0;
+        int actual;
 
         while (sum <= 5000) {
 
-            int n1 = random.nextInt(31);
+            actual = random.nextInt(MAX_VALUE);
 
-            sum = sum + n1;
+            if (actual < min) {
+                min = actual;
 
-            System.out.println(n1);
-            System.out.println(n1 + sum);
+            }
 
+            if (actual > max) {
+                max = actual;
+
+            }
+
+            sum = sum + actual;
         }
 
     }
 
+    public static void main(String[] args) {
+
+    }
+
 }
-
-

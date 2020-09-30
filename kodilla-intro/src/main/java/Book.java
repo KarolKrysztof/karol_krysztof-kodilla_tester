@@ -1,8 +1,13 @@
 public class Book {
 
-    private static Book book;
+    public static final Book book = new Book();
+
     private String author;
     private String title;
+
+    private Book() {
+
+    }
 
     public String getAuthor() {
         return author;

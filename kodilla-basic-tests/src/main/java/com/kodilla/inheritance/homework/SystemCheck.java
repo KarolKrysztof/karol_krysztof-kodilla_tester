@@ -6,9 +6,11 @@ public class SystemCheck {
 
         LinuxSystem linux = new LinuxSystem(1991);
         linux.turnOn();
+        linux.turnOff();
         linux.displayYearOfPublishment();
 
         SystemMacOs macOS = new SystemMacOs(2001);
+        macOS.turnOn();
         macOS.turnOff();
         macOS.displayYearOfPublishment();
     }

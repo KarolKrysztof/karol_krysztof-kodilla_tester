@@ -12,8 +12,7 @@ public class Car {
 
     }
 
-    public void turnOnLights() {
-        System.out.println("Lights were turned on");
+    public void turnOnLights() { System.out.println("Lights were turned on");
     }
 
     public void openDoors() {

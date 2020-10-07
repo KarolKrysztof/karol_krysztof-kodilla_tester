@@ -6,8 +6,4 @@ public class PoliceMan extends Job {
         super(salary, responsibilities);
     }
 
-    @Override
-    public void displayResponsibilities() {
-        System.out.println("Policjant pilnuje porządku");
-    }
 }

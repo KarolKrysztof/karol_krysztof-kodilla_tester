@@ -15,5 +15,4 @@ public abstract class Job {
         return responsibilities;
     }
 
-    public abstract void displayResponsibilities();
 }

@@ -6,8 +6,4 @@ public class Manager extends Job {
         super(salary, responsibilities);
     }
 
-    @Override
-    public void displayResponsibilities() {
-        System.out.println("Manager zarządza ludźmi");
-    }
 }

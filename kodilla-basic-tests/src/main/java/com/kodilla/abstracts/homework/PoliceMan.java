@@ -7,7 +7,7 @@ public class PoliceMan extends Job {
     }
 
     @Override
-    public void printResponsibilities() {
+    public void displayResponsibilities() {
         System.out.println("Policjant pilnuje porządku");
     }
 }

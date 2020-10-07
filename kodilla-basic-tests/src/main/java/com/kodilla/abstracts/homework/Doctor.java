@@ -7,7 +7,7 @@ public class Doctor extends Job {
     }
 
     @Override
-    public void printResponsibilities() {
+    public void displayResponsibilities() {
         System.out.println("Lekarz leczy ludzi");
 
     }

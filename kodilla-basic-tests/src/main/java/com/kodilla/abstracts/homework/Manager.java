@@ -7,7 +7,7 @@ public class Manager extends Job {
     }
 
     @Override
-    public void printResponsibilities() {
+    public void displayResponsibilities() {
         System.out.println("Manager zarządza ludźmi");
     }
 }

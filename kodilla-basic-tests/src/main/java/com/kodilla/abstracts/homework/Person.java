@@ -6,20 +6,23 @@ public class Person {
     private int age;
     private Job job;
 
-    public Person (String firstName, int age, String job) {
+    public Person (String firstName, int age) {
 
         this.firstName = firstName;
         this.age = age;
     }
 
-    public static void main(String[] args) {
+    public void setJob (Job job) {
+        this.job = job;
 
-        Doctor doctor = new Doctor(5000, null);
-        doctor.printResponsibilities();
-        Manager manager = new Manager(3000, null);
-        manager.printResponsibilities();
-        PoliceMan policeMan = new PoliceMan(4000, null);
-        policeMan.printResponsibilities();
+    }
+
+    public void displayResponsibilities() {
+        if (job == null) {
+            System.out.println("This employee has no responsibilities yet");
+            return;
+        }
+        System.out.println(firstName + "'s responsibilities are" + " " + job.getResponsibilities());
 
     }
 

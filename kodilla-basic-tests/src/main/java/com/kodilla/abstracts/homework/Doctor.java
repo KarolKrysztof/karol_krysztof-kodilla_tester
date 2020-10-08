@@ -6,4 +6,5 @@ public class Doctor extends Job {
         super(salary, responsibilities);
     }
 
-}
+ task-3.2
+

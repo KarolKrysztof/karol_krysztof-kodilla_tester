@@ -6,4 +6,6 @@ public class PoliceMan extends Job {
         super(salary, responsibilities);
     }
 
+ task-3.2
+
 }

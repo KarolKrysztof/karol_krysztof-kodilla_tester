@@ -6,4 +6,6 @@ public class Manager extends Job {
         super(salary, responsibilities);
     }
 
+ task-3.2
+
 }

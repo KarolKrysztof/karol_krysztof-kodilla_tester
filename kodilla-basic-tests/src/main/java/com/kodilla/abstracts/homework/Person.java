@@ -4,7 +4,6 @@ public class Person {
 
     private String firstName;
     private int age;
- task-3.2
     private Job job;
 
     public Person (String firstName, int age) {

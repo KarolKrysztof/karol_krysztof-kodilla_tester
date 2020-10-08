@@ -8,13 +8,11 @@ public abstract class Job {
     public Job (double salary, String responsibilities) {
         this.salary = salary;
         this.responsibilities = responsibilities;
- task-3.2
 
     }
 
     public String getResponsibilities() {
         return responsibilities;
     }
-
 
 }

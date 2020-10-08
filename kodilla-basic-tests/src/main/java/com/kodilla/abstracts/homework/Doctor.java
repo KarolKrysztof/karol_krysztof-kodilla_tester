@@ -6,9 +6,5 @@ public class Doctor extends Job {
         super(salary, responsibilities);
     }
 
-    @Override
-    public void printResponsibilities() {
-        System.out.println("Lekarz leczy ludzi");
+ task-3.2
 
-    }
-}

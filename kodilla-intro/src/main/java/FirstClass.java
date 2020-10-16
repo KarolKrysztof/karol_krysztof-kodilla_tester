@@ -1,5 +1,5 @@
 public class FirstClass {
- example-2.1-2.2
+
         public static void main (String[] args){
             Notebook notebook = new Notebook("600g",1000, 2019);
             System.out.println(notebook.weight + " " + notebook.price + " " + notebook.year);

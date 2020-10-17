@@ -11,11 +11,7 @@ public class Bank {
     }
 
     public int getBalance() {
-        int sum = 0;
-        for (CashMachine cashMachine : cashMachines) {
-            sum += cashMachine.getBalance();
-        }
-        return sum;
+        return getPayInSum() - getPayOutSum();
     }
 
     public int getPayOutCount() {

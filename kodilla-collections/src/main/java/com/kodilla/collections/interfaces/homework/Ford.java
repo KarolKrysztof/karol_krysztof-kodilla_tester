@@ -2,9 +2,9 @@ package com.kodilla.collections.interfaces.homework;
 
 public class Ford implements Car {
 
-    int speed;
-    private static final int increaseValue = 30;
-    private static final int decreaseValue = 10;
+    private int speed;
+    private static final int INCREASE_VALUE = 30;
+    private static final int DECREASE_VALUE = 50;
 
     public Ford(int speed) {
         this.speed = speed;
@@ -16,15 +16,20 @@ public class Ford implements Car {
     }
 
     @Override
-    public void getIncreaseSpeed() {
-        speed = speed + increaseValue;
+    public void increaseSpeed() {
+        speed = speed + INCREASE_VALUE;
 
     }
 
     @Override
-    public void getDecreaseSpeed() {
-        speed = speed - decreaseValue;
-
+    public void decreaseSpeed() {
+        if(speed < 0) {
+          speed = 0;
+        }
+        else if(speed - DECREASE_VALUE < 0)
+            speed = 0;
+        else
+            speed = speed - DECREASE_VALUE;
     }
 
 }

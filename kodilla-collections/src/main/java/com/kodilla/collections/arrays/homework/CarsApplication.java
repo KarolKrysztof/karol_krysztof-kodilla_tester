@@ -1,36 +1,37 @@
 package com.kodilla.collections.arrays.homework;
 
-import com.kodilla.collections.interfaces.homework.Car;
-import com.kodilla.collections.interfaces.homework.Ford;
-import com.kodilla.collections.interfaces.homework.Kia;
-import com.kodilla.collections.interfaces.homework.Lexus;
+import com.kodilla.collections.interfaces.homework.*;
 
 import java.util.Random;
 
 public class CarsApplication {
 
+    private static final Random GENERATOR = new Random();
+
+    public static Car drawCar() {
+        Car car = new Ford(30);
+        int repeats = GENERATOR.nextInt(3) + 1;
+        for (int i = 0; i < repeats; i++) {
+            car.increaseSpeed();
+        }
+
+        return car;
+
+    }
+
     public static void main(String[] args) {
-        Random random = new Random();
-        Car[] cars = new Car[random.nextInt(15) + 1];
-        for(int n = 0; n < cars.length; n++)
-            cars[n] = drawCar();
+
+        Car[] cars = new Car[GENERATOR.nextInt(15) + 1];
+        for(int i = 0; i < cars.length; i++)
+            cars[i] = drawCar();
         for(Car car : cars)
             CarUtils.describeCar(car);
 
     }
 
-    private static Car drawCar() {
-        Random random = new Random();
-        int drawnCarBrand = random.nextInt(3);
-        int speed = random.nextInt(100) + 50;
-        if (drawnCarBrand == 0)
-            return new Ford(speed);
-        else if (drawnCarBrand == 1)
-            return new Lexus(speed);
-        else
-            return new Kia(speed);
-
+    private void randomIncreaseSpeed(Car car) {
+        int repeats = GENERATOR.nextInt(3) + 1;
+        for (int i = 0; i < repeats; i++) {car.increaseSpeed();}
     }
-
 
 }

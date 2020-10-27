@@ -3,13 +3,13 @@ package com.kodilla.collections.interfaces.homework;
 public class CarRace {
 
     public static void main(String[] args) {
-        Car ford = new Ford(40);
+        Car ford = new Ford("Ford Mustang", 0);
         doRace(ford);
 
-        Car lexus = new Lexus(80);
+        Car lexus = new Lexus("Lexus NX 300",0);
         doRace(lexus);
 
-        Car kia = new Kia(60);
+        Car kia = new Kia("Kia Sportage", 0);
         doRace(kia);
 
         }
@@ -21,7 +21,7 @@ public class CarRace {
         car.decreaseSpeed();
         car.decreaseSpeed();
 
-        System.out.println(car.getSpeed());
+        System.out.println(car.getName() + " " + car.getSpeed());
 
     }
 }

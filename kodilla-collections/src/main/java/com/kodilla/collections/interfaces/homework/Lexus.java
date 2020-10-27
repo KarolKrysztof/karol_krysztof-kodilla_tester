@@ -3,11 +3,18 @@ package com.kodilla.collections.interfaces.homework;
 public class Lexus implements Car {
 
     private int speed;
+    private final String name;
     private static final int INCREASE_VALUE = 50;
     private static final int DECREASE_VALUE = 30;
 
-    public Lexus(int speed) {
-        this.speed = speed;
+    public Lexus(String name, int speed) {
+        this.name = name;
+        this.speed = 0;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -23,13 +30,9 @@ public class Lexus implements Car {
 
     @Override
     public void decreaseSpeed() {
-        if(speed < 0) {
+        speed = speed - DECREASE_VALUE;
+        if (speed < 0)
             speed = 0;
-        }
-        else if(speed - DECREASE_VALUE < 0)
-            speed = 0;
-        else
-            speed = speed - DECREASE_VALUE;
 
         }
 

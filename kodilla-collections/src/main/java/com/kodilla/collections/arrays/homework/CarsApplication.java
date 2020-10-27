@@ -9,7 +9,7 @@ public class CarsApplication {
     private static final Random GENERATOR = new Random();
 
     public static Car drawCar() {
-        Car car = new Ford(30);
+        Car car = new Ford("KA", 0);
         int repeats = GENERATOR.nextInt(3) + 1;
         for (int i = 0; i < repeats; i++) {
             car.increaseSpeed();
@@ -32,6 +32,7 @@ public class CarsApplication {
     private void randomIncreaseSpeed(Car car) {
         int repeats = GENERATOR.nextInt(3) + 1;
         for (int i = 0; i < repeats; i++) {car.increaseSpeed();}
+
     }
 
 }

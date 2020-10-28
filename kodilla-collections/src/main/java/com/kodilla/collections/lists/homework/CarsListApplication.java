@@ -12,18 +12,24 @@ import java.util.List;
 public class CarsListApplication {
     public static void main(String[] args) {
         List<Car> cars = new ArrayList<>();
-        Kia kia = new Kia("Sportage", 60);
+        Kia kia = new Kia();
         cars.add(kia);
-        cars.add(new Ford("KA", 40));
-        cars.add(new Lexus("NX 300", 90));
+        cars.add(new Ford());
+        cars.add(new Lexus());
+
+        printCars(cars);
 
         cars.remove(1);
         cars.remove(kia);
 
         System.out.println(cars.size());
+        printCars(cars);
+
+    }
+
+    private static void printCars(List<Car> cars) {
         for (Car car : cars) {
             CarUtils.describeCar(car);
         }
-
     }
 }

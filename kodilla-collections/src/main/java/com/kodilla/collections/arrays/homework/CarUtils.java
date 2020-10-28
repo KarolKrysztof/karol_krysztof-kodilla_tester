@@ -8,8 +8,8 @@ import com.kodilla.collections.interfaces.homework.Lexus;
 public class CarUtils {
 
     public static void describeCar(Car car) {
-        System.out.println("Car brand: " + getCarBrand(car));
-        System.out.println("Car speed: " + car.getSpeed());
+        System.out.println(getCarBrand(car) + " " + car.getSpeed() + "km/h");
+
     }
 
     public static String getCarBrand(Car car) {

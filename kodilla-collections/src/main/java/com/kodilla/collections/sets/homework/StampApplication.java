@@ -16,15 +16,7 @@ public class StampApplication {
 
         System.out.println(stamps.size());
         for(Stamp stamp : stamps)
-            System.out.println(stamp.getStampName() + " " + stamp.getStampSize() + " cm2");
-
-        boolean isStamped = true;
-        if (isStamped) {
-            System.out.println("Stamp is stamped.");
-
-        } else {
-            System.out.println("Stamp is not stamped.");
-        }
+            System.out.println(stamp.getStampName() + " " + stamp.getStampSize() + " cm2 " + stamp.isStamped());
 
     }
 

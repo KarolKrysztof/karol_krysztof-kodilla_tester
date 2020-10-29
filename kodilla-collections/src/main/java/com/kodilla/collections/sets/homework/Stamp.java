@@ -7,6 +7,7 @@ public class Stamp {
     private String stampName;
     private double stampWidth;
     private double stampHeight;
+    private double stampSize;
 
     public Stamp(String stampName, double stampWidth, double stampHeight) {
         this.stampName = stampName;
@@ -19,12 +20,8 @@ public class Stamp {
         return stampName;
     }
 
-   public void stamped() {
-       System.out.println("Stamp is stamped");
-    }
-
-    public void notStamped() {
-        System.out.println("Stamp is not stamped");
+    public double getStampSize() {
+        return stampWidth * stampHeight;
 
     }
 
@@ -35,12 +32,13 @@ public class Stamp {
         Stamp stamp = (Stamp) o;
         return Double.compare(stamp.stampWidth, stampWidth) == 0 &&
                 Double.compare(stamp.stampHeight, stampHeight) == 0 &&
+                Double.compare(stamp.stampSize, stampSize) == 0 &&
                 Objects.equals(stampName, stamp.stampName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(stampName, stampWidth, stampHeight);
+        return Objects.hash(stampName, stampWidth, stampHeight, stampSize);
     }
 
     @Override
@@ -49,7 +47,7 @@ public class Stamp {
                 "stampName='" + stampName + '\'' +
                 ", stampWidth=" + stampWidth +
                 ", stampHeight=" + stampHeight +
+                ", stampSize=" + stampSize +
                 '}';
     }
-
 }

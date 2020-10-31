@@ -10,14 +10,16 @@ public class Stamp {
     private double stampSize;
     private boolean stamped;
 
-    public Stamp(String stampName, double stampWidth, double stampHeight) {
+    public Stamp(String stampName, double stampWidth, double stampHeight, boolean stamped) {
         this.stampName = stampName;
         this.stampWidth = stampWidth;
         this.stampHeight = stampHeight;
+        this.stamped = stamped;
 
     }
 
     public String getStampName() {
+
         return stampName;
     }
 
@@ -25,8 +27,9 @@ public class Stamp {
         return stampWidth * stampHeight;
     }
 
-    public boolean isStamped() {
-        return stamped;
+    public void stamped() {
+        if (stamped) System.out.println("Stamp is stamped");
+        else System.out.println("Stamp is not stamped");
     }
 
     @Override
@@ -56,4 +59,5 @@ public class Stamp {
                 ", stamped=" + stamped +
                 '}';
     }
+
 }

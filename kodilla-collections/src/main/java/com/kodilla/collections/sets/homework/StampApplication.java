@@ -15,8 +15,10 @@ public class StampApplication {
         stamps.add(new Stamp("Ford Mustang", 10, 4.5, false));
 
         System.out.println(stamps.size());
-        for(Stamp stamp : stamps)
-            System.out.println(stamp.getStampName() + " " + stamp.getStampSize() + " cm2 ");
+        for(Stamp stamp : stamps) {
+            System.out.println(stamp.getStampName() + " " + stamp.getStampSize() + " cm2 " + stamp.getStamped());
+
+        }
 
     }
 

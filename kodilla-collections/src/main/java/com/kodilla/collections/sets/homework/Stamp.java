@@ -23,8 +23,8 @@ public class Stamp {
 
     }
 
-    public double getStampSize() {
-        return stampWidth * stampHeight;
+    public String getStampSize() {
+        return stampWidth +"x" + stampHeight;
     }
 
     public String getStamped() {

@@ -16,7 +16,7 @@ public class StampApplication {
 
         System.out.println(stamps.size());
         for(Stamp stamp : stamps) {
-            System.out.println(stamp.getStampName() + " " + stamp.getStampSize() + " cm2 " + stamp.getStamped());
+            System.out.println(stamp.getStampName() + " " + stamp.getStampSize() + " " + stamp.getStamped());
 
         }
 

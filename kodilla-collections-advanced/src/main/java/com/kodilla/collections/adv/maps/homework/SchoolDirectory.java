@@ -1,5 +1,6 @@
 package com.kodilla.collections.adv.maps.homework;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,9 +11,9 @@ public class SchoolDirectory {
         Principal clue = new Principal("Zoe", "Claus");
         Principal mayer = new Principal("Stiven", "Mayers");
 
-        School firstSchool = new School("First School", 15, 18, 14, 20, 16);
-        School secondSchool = new School("Second School", 28, 30, 33, 32, 30);
-        School thirdSchool = new School("Third School", 25, 24, 22, 24, 26);
+        School firstSchool = new School("First School", Arrays.asList (15, 18, 14, 20, 16));
+        School secondSchool = new School("Second School", Arrays.asList(28, 30, 33, 32, 30));
+        School thirdSchool = new School("Third School", Arrays.asList(25, 24, 22, 24, 26));
 
         principals.put(jefferson, firstSchool);
         principals.put(clue, secondSchool);

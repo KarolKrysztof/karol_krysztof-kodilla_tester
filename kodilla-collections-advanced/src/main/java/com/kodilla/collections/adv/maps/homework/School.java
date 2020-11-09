@@ -1,17 +1,16 @@
 package com.kodilla.collections.adv.maps.homework;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class School {
-    private List<Integer> school = new ArrayList<>();
-    private String name = "";
+    private List studentCountInClasses;
+    private String name;
 
-    public School(String name, int ... school) {
-        for (Integer studentsInClass : school) {
-            this.school.add(studentsInClass);
-        }
+    public School(String name, List studentCountInClasses) {
         this.name = name;
+        this.studentCountInClasses = studentCountInClasses;
     }
 
     public String getName() {
@@ -20,18 +19,19 @@ public class School {
 
     public int numberOfStudents() {
         int sum = 0;
-        for (Integer integer : school) {
-            sum += integer;
+        for (int i = 0; i < studentCountInClasses.size(); i++);{
+
         }
+
         return sum;
     }
-
-
 
     @Override
     public String toString() {
         return "School{" +
-                "studenents=" + school +
+                "studentCountInClasses=" + studentCountInClasses +
+                ", name='" + name + '\'' +
                 '}';
     }
+
 }

@@ -12,7 +12,7 @@ class FlightFinderTestSuite {
     @Test
     public void testFlightFinderFrom() {
         // given
-        FlightFinder flightFinder = new FlightFinder();
+        FlightFinder flightFinder = new FlightFinder(FlightRepository.getFlightTable());
         List<Flight> flightList = FlightRepository.getFlightTable();
         flightList.add(new Flight("Warsaw", "Dublin"));
         flightList.add(new Flight("Warsaw", "Shanghai"));
@@ -28,7 +28,7 @@ class FlightFinderTestSuite {
     @Test
     public void testFlightFinderTo() {
         // given
-        FlightFinder flightFinder = new FlightFinder();
+        FlightFinder flightFinder = new FlightFinder(FlightRepository.getFlightTable());
         List<Flight> flightList = FlightRepository.getFlightTable();
         flightList.add(new Flight("New York", "Warsaw"));
         flightList.add(new Flight("Moscow", "Warsaw"));

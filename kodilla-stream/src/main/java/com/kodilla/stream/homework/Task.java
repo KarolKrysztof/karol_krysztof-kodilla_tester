@@ -40,4 +40,13 @@ public class Task {
     public int hashCode() {
         return Objects.hash(name, opened, deadline);
     }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "name='" + name + '\'' +
+                ", opened=" + opened +
+                ", deadline=" + deadline +
+                '}';
+    }
 }

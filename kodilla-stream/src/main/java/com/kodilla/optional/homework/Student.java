@@ -10,6 +10,11 @@ public class Student {
     List<Teacher> teachers = new ArrayList<>();
 
 
+    public Student (String name) {
+        this.name = name;
+    }
+
+
     public Student(String name, Teacher teacher) {
         this.name = name;
         this.teacher = teacher;

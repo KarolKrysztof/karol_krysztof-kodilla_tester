@@ -11,7 +11,7 @@ public class WarehouseApp {
             Order order = warehouse.getOrder("19");
             System.out.println("Order number: " + order.getNumber() + " is in the Warehouse");
         } catch (OrderDoesntExistException e) {
-            System.out.println("There is no such order in the Warehouse");
+            System.out.println("There is no such order in the Warehouse" + e.getMissingNumber());
         } finally {
             System.out.println("Thank you for your enquiry");
         }

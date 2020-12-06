@@ -6,11 +6,10 @@ import java.util.List;
 public class Warehouse {
 
     private List<Order> orders = new ArrayList<>();
-    private Order order;
 
-    public List<Order> addOrder (Order order) {
+    public void addOrder (Order order) {
         orders.add(order);
-        return orders;
+
     }
 
     public Order getOrder (String number) throws OrderDoesntExistException {
@@ -18,6 +17,6 @@ public class Warehouse {
                 .stream()
                 .filter(u -> u.getNumber().equals(number))
                 .findFirst()
-                .orElseThrow(OrderDoesntExistException:: new);
+                .orElseThrow(()-> new OrderDoesntExistException(number));
     }
 }

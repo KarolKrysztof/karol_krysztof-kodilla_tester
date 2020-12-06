@@ -24,12 +24,11 @@ public class WarehouseTestSuite {
     public void isGetOrderReturnException() throws OrderDoesntExistException {
         // given
         Warehouse warehouse = new Warehouse();
-        Order order1 = new Order("1");
-        warehouse.addOrder(order1);
+        warehouse.addOrder(new Order("1"));
         // when
         Order order = warehouse.getOrder("5");
-        //then
-        assertEquals("5", warehouse.getOrder("1"));
+        // then
+
     }
 
 }

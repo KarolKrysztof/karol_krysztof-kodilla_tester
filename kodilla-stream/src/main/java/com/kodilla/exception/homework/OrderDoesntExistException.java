@@ -1,5 +1,6 @@
 package com.kodilla.exception.homework;
 
+
 public class OrderDoesntExistException extends Exception {
     private String missingNumber;
 
@@ -11,4 +12,5 @@ public class OrderDoesntExistException extends Exception {
     public String getMissingNumber() {
         return missingNumber;
     }
+
 }

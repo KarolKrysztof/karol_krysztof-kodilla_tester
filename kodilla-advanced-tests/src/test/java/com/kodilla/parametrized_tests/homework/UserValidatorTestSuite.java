@@ -13,7 +13,6 @@ public class UserValidatorTestSuite {
 
     @ParameterizedTest
     @NullAndEmptySource
-
     public void shouldReturnFalseIfStringIsEmpty(String text) {
         System.out.println("|" + text + "|");
         assertFalse(userNameValidator.validateUsername(text));
@@ -21,21 +20,18 @@ public class UserValidatorTestSuite {
 
     @ParameterizedTest
     @ValueSource(strings = {"Ka", "."})
-
     public void shouldReturnFalseIfStringIsShorterThanThreeChar(String text) {
         assertFalse(userNameValidator.validateUsername(text));
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"KA%", "rol!i", "FFF?/", "'Baron", "JpK@", "#007", "C&I"})
-
     public void shouldReturnFalseIfStringIsContainInvalidChar(String text) {
         assertFalse(userNameValidator.validateUsername(text));
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"Kar", "magda84_", "gg8", ".86", "___", "..."})
-
     public void shouldReturnTrueIfStringIsCorrect(String text) {
         assertTrue(userNameValidator.validateUsername(text));
     }

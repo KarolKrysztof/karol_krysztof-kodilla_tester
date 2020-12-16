@@ -9,7 +9,7 @@ public class PersonTestSuite {
 
     @ParameterizedTest
     @MethodSource(value = "com.kodilla.parametrized_tests.homework.PersonData#provideWeightAndHeightDataForBMITest")
-    public void shouldReturnCorrectBMIMessage(String expected, double weight, double heightInMeters) throws InvalidNumbersException {
+    public void shouldReturnCorrectBMIMessage(String expected, double weight, double heightInMeters) {
         Person person = new Person(heightInMeters, weight);
         assertEquals(expected, person.getBMI());
     }

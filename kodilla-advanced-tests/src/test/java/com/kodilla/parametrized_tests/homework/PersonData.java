@@ -19,9 +19,7 @@ public class PersonData {
                 Arguments.of("Obese Class III (Very severely obese)", 125, 1.75),
                 Arguments.of("Obese Class IV (Morbidly obese)", 140, 1.75),
                 Arguments.of("Obese Class V (Super obese)", 160, 1.75),
-                Arguments.of("Obese Class VI (Hyper obese)", 200, 1.75),
-                Arguments.of("Incorrect input. Please provide values greater then 0.", 0, 0),
-                Arguments.of("Incorrect input. Please provide values greater then 0.", -160, -1.55)
+                Arguments.of("Obese Class VI (Hyper obese)", 200, 1.75)
         );
     }
 

@@ -32,7 +32,7 @@ public class GamblingMachine {
             throw new InvalidNumbersException();
         }
 
-        if (numbers.stream().anyMatch(number -> (number < 1 || number > 50))) {
+        if (numbers.stream().anyMatch(number -> (number < 1 || number > 49))) {
             throw new InvalidNumbersException();
         }
     }

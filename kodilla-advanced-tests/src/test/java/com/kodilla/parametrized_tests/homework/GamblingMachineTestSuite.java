@@ -13,62 +13,17 @@ public class GamblingMachineTestSuite {
     GamblingMachine gamblingMachine = new GamblingMachine();
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/gamblingMachineExampleCorrect.csv", delimiter = ':')
-    public void shouldReturnMatchedResultForCorrectValues(String testNumbers) throws InvalidNumbersException {
-        Set<Integer> numbers = convertToSet(testNumbers);
-
-        int checked = gamblingMachine.howManyWins(numbers);
+    @CsvFileSource(resources = "/incorrect.csv", delimiter = ':')
+    public void shouldThrowExceptionForInvalidNumbers(String testNumbers) {
+       Assertions.assertThrows(InvalidNumbersException.class, () -> gamblingMachine.howManyWins(convertToSet(testNumbers)));
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/gamblinMachineTooShortExample.csv", delimiter = ':')
-    public void shouldReturnExceptionForTooShortSet(String testNumbers) {
-        Assertions.assertThrows(InvalidNumbersException.class, () -> {
-            Set<Integer> numbers = convertToSet(testNumbers);
+    @CsvFileSource(resources = "/correct.csv", delimiter = ':')
+    public void shouldReturnCorrectNumber(String testNumbers) throws InvalidNumbersException {
+        int result = gamblingMachine.howManyWins(convertToSet(testNumbers));
+        Assertions.assertTrue(result >= 0 && result <= 6);
 
-            int checked = gamblingMachine.howManyWins(numbers);
-        });
-
-    }
-
-    @ParameterizedTest
-    @CsvFileSource(resources = "/gamblingMachineTooLongExample.csv", delimiter = ':')
-    public void shouldReturnExceptionForTooLongSet(String testNumbers) {
-        Assertions.assertThrows(InvalidNumbersException.class, () -> {
-            Set<Integer> numbers = convertToSet(testNumbers);
-
-            int checked = gamblingMachine.howManyWins(numbers);
-        });
-    }
-
-    @ParameterizedTest
-    @CsvFileSource(resources = "/gamblingMachineZeroAndNegativeValues.csv", delimiter = ':')
-    public void shouldReturnExceptionForZeroAndNegativeValue(String testNumbers) {
-        Assertions.assertThrows(InvalidNumbersException.class, () -> {
-            Set<Integer> numbers = convertToSet(testNumbers);
-
-            int checked = gamblingMachine.howManyWins(numbers);
-        });
-    }
-
-    @ParameterizedTest
-    @CsvFileSource(resources = "/gamblingMachineTooHighValues.csv", delimiter = ':')
-    public void shouldReturnExceptionForTooHighValues(String testNumbers) {
-        Assertions.assertThrows(InvalidNumbersException.class, () -> {
-            Set<Integer> numbers = convertToSet(testNumbers);
-
-            int checked = gamblingMachine.howManyWins(numbers);
-        });
-    }
-
-    @Test
-    public void shouldReturnExceptionForEmptyValues() {
-        Assertions.assertThrows(InvalidNumbersException.class, () -> gamblingMachine.howManyWins(Collections.emptySet()));
-    }
-
-    @Test
-    public void shouldReturnExceptionForNullValues() {
-        Assertions.assertThrows(InvalidNumbersException.class, () -> gamblingMachine.howManyWins(null));
     }
 
     private Set<Integer> convertToSet(String testNumbers) {
